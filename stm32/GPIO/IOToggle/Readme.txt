@@ -1,0 +1,5 @@
+STM32F103裸机开发基础学习：
+
+基于ST固件库V3.4.0实现GPIO控制LED的功能。
+
+安富莱STM32F103ZE-EK开发板V2和V3——LD1、LD2、LD3和LD4已经连接到CPU的PF6、PF7、PF8、PF9引脚。
