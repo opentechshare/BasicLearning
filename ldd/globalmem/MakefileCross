@@ -1,0 +1,15 @@
+ifneq ($(KERNELRELEASE),)
+	obj-m := globalmem.o
+else
+
+KDIR := /usr/local/src/linux-3.0.1/
+
+build: kernel_modules
+
+kernel_modules:
+	make -C $(KDIR) M=$(CURDIR) modules
+	#make -C $(KDIR) M=$(PWD) modules
+clean:
+	make -C $(KDIR) M=$(CURDIR) clean
+	#make -C $(KDIR) M=$(PWD) clean
+endif
