@@ -1,0 +1,8 @@
+# CC = arm-linux-gcc
+CC = gcc
+test : globalfifo_test.o
+	$(CC) globalfifo_test.o -o test
+	$(CC) -c globalfifo_test.c -o globalfifo_test.o
+.PHONY: clean
+ clean:
+	rm -f test *.o

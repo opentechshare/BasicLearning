@@ -1,0 +1,8 @@
+# CC = arm-linux-gcc
+CC = gcc
+poll : pollmonitor.o
+	$(CC) pollmonitor.o -o poll
+	$(CC) -c pollmonitor.c -o pollmonitor.o
+.PHONY: clean
+ clean:
+	rm -f poll *.o
