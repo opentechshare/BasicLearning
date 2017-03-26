@@ -1,0 +1,14 @@
+ifneq ($(KERNELRELEASE),)
+	obj-m := second.o
+else
+
+KDIR := /usr/local/src/linux-3.0.1/
+
+build: kernel_modules
+
+kernel_modules:
+	make -C $(KDIR) M=$(CURDIR) modules
+clean:
+	make -C $(KDIR) M=$(CURDIR) clean
+endif
+
