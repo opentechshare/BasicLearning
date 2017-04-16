@@ -1,0 +1,9 @@
+本地参考资料路径：
+G:\OpenSourceCode\RT-Thread
+G:\BaiduYunDownload\安富莱STM32-V3\03.软件资料\14.RT-Thread
+
+网络参考资料路径：
+http://www.rt-thread.org/page/31.html
+
+RT-Thread基础版本：
+rt-thread-v2.1.0
