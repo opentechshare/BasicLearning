@@ -89,7 +89,7 @@ void rt_components_board_init(void)
 #if RT_DEBUG_INIT
     int result;
     const struct rt_init_desc *desc;
-    for (desc = &__rt_init_desc_rti_board_start; desc < &__rt_init_desc_rti_board_end; desc ++)
+    for (desc = &__rt_init_desc_rti_board_start; desc < &__rt_init_desc_rti_board_end; desc++)
     {
         rt_kprintf("initialize %s", desc->fn_name);
         result = desc->fn();

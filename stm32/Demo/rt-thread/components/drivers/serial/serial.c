@@ -618,3 +618,4 @@ void rt_hw_serial_isr(struct rt_serial_device *serial, int event)
         }
     }
 }
+

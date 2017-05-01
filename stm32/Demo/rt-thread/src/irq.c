@@ -51,7 +51,7 @@ void rt_interrupt_enter(void)
                                 rt_interrupt_nest));
 
     level = rt_hw_interrupt_disable();
-    rt_interrupt_nest ++;
+    rt_interrupt_nest++;
     rt_hw_interrupt_enable(level);
 }
 RTM_EXPORT(rt_interrupt_enter);
@@ -71,7 +71,7 @@ void rt_interrupt_leave(void)
                                 rt_interrupt_nest));
 
     level = rt_hw_interrupt_disable();
-    rt_interrupt_nest --;
+    rt_interrupt_nest--;
     rt_hw_interrupt_enable(level);
 }
 RTM_EXPORT(rt_interrupt_leave);

@@ -43,7 +43,7 @@
 #include "led.h"
 
 ALIGN(RT_ALIGN_SIZE)
-static rt_uint8_t led_stack[ 512 ];
+static rt_uint8_t led_stack[512];
 static struct rt_thread led_thread;
 static void led_thread_entry(void* parameter)
 {
@@ -59,14 +59,14 @@ static void led_thread_entry(void* parameter)
 #endif
         count++;
         rt_hw_led_on(0);
-        rt_thread_delay( RT_TICK_PER_SECOND/2 ); /* sleep 0.5 second and switch to other thread */
+        rt_thread_delay(RT_TICK_PER_SECOND / 2); /* sleep 0.5 second and switch to other thread */
 
         /* led1 off */
 #ifndef RT_USING_FINSH
         rt_kprintf("led off\r\n");
 #endif
         rt_hw_led_off(0);
-        rt_thread_delay( RT_TICK_PER_SECOND/2 );
+        rt_thread_delay(RT_TICK_PER_SECOND / 2);
     }
 }
 

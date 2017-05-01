@@ -85,12 +85,12 @@ void rt_tick_increase(void)
     struct rt_thread *thread;
 
     /* increase the global tick */
-    ++ rt_tick;
+    ++rt_tick;
 
     /* check time slice */
     thread = rt_thread_self();
 
-    -- thread->remaining_tick;
+    --thread->remaining_tick;
     if (thread->remaining_tick == 0)
     {
         /* change to initialized tick */

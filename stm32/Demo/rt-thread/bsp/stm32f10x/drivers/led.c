@@ -57,10 +57,10 @@ void rt_hw_led_on(rt_uint32_t n)
     switch (n)
     {
     case 0:
-        GPIO_SetBits(led1_gpio, led1_pin);
+        GPIO_ResetBits(led1_gpio, led1_pin);
         break;
     case 1:
-        GPIO_SetBits(led2_gpio, led2_pin);
+        GPIO_ResetBits(led2_gpio, led2_pin);
         break;
     default:
         break;
@@ -72,10 +72,10 @@ void rt_hw_led_off(rt_uint32_t n)
     switch (n)
     {
     case 0:
-        GPIO_ResetBits(led1_gpio, led1_pin);
+        GPIO_SetBits(led1_gpio, led1_pin);
         break;
     case 1:
-        GPIO_ResetBits(led2_gpio, led2_pin);
+        GPIO_SetBits(led2_gpio, led2_pin);
         break;
     default:
         break;
@@ -94,7 +94,7 @@ void led(rt_uint32_t led, rt_uint32_t value)
         led_inited = 1;
     }
 
-    if ( led == 0 )
+    if (led == 0)
     {
         /* set led status */
         switch (value)
@@ -110,7 +110,7 @@ void led(rt_uint32_t led, rt_uint32_t value)
         }
     }
 
-    if ( led == 1 )
+    if (led == 1)
     {
         /* set led status */
         switch (value)
@@ -126,5 +126,5 @@ void led(rt_uint32_t led, rt_uint32_t value)
         }
     }
 }
-FINSH_FUNCTION_EXPORT(led, set led[0 - 1] on[0] or off[1].)
+FINSH_FUNCTION_EXPORT(led, set led[0 - 1] on[1] or off[0].)
 #endif

@@ -7,3 +7,8 @@ http://www.rt-thread.org/page/31.html
 
 RT-Thread基础版本：
 rt-thread-v2.1.0
+
+Scons资料：
+http://www.scons.org/
+http://scons.org/documentation.html
+http://scons.org/pages/download.html
